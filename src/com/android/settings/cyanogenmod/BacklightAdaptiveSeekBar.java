@@ -55,7 +55,7 @@ public class BacklightAdaptiveSeekBar extends SeekBar {
     @Override
     public void setMax(int max) {
         mMax = max;
-        mGap = max / 10;
+        mGap = max / 13;
         super.setMax(max + 2 * mGap);
     }
 
