@@ -998,4 +998,21 @@
 
     <string name="navigation_ring_title">Navigation ring targets</string>
     <string name="navigation_ring_message">Tap the edit icon to open the navigation ring for editing.\n\nSelect a target to configure its behavior.\n\nTap the check mark icon to save your changes, or restore to reset the settings to defaults.</string>
+    
+    <!-- uRom -->
+    <string name="urom_category">uCyan 12</string>
+    <string name="urom_generic_custom">Custom</string>
+    <string name="urom_generic_disabled">Disabled</string>
+    <string name="urom_help_summary">(*) need a reboot, (**) need a reflash</string>
+   
+    <!-- Ram minfree -->
+    <string name="ram_minfree_title">Low memory killer (*)</string>
+    <string name="ram_minfree_automatic">Automatic</string>
+    
+    <!-- zram -->
+   <string name="zram_size_title">Swap/zram (*)</string>
+
+   <!-- kernel -->
+   <string name="kernel_oc_title">Overclocking (**)</string>
+
 </resources>
