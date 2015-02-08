@@ -415,6 +415,13 @@
             android:entries="@array/kernel_oc_entries"
             android:entryValues="@array/kernel_oc_values" />
 
+        <ListPreference
+            android:key="doze_brightness"
+            android:title="@string/doze_brightness_title"
+            android:persistent="false"
+            android:entries="@array/doze_brightness_entries"
+            android:entryValues="@array/doze_brightness_values" />
+
      </PreferenceCategory>
 
 </PreferenceScreen>

@@ -1162,6 +1162,7 @@
     <string name="urom_category">uCyan 12</string>
     <string name="urom_generic_custom">Custom</string>
     <string name="urom_generic_disabled">Disabled</string>
+    <string name="urom_generic_default">Default</string>
     <string name="urom_help_summary">(*) need a reboot, (**) need a reflash</string>
    
     <!-- Ram minfree -->
@@ -1169,5 +1170,5 @@
     <string name="ram_minfree_automatic">Automatic</string>
     
     <!-- zram -->
-   <string name="zram_size_title">Swap/zram (*)</string>
+    <string name="zram_size_title">Swap/zram (*)</string>
 </resources>

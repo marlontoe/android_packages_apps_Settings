@@ -539,4 +539,25 @@
         <item>301989888</item>
         <item>-2</item>
     </string-array>
+
+    <!-- Array for doze brightness -->
+    <string-array name="doze_brightness_entries">
+        <item>@string/urom_generic_default</item>
+        <item>15%</item>
+        <item>20%</item>
+        <item>25%</item>
+        <item>30%</item>
+        <item>35%</item>
+        <item>@string/urom_generic_custom</item>
+    </string-array>
+
+    <string-array name="doze_brightness_values" translatable="false" >
+        <item>-1</item>
+        <item>38</item>
+        <item>51</item>
+        <item>64</item>
+        <item>77</item>
+        <item>90</item>
+        <item>-2</item>
+    </string-array>
 </resources>
