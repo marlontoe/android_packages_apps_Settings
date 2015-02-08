@@ -196,6 +196,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     
     private static final String KERNEL_OC_KEY = "kernel_oc";
     private static final String KERNEL_OC_PROPERTY = "persist.kernel.oc";
+    
+    private static final String DOZE_BRIGHTNESS_KEY = "doze_brightness";
+    private static final String DOZE_BRIGHTNESS_PROPERTY = "persist.screen.doze_brightness";
 
     private IWindowManager mWindowManager;
     private IBackupManager mBackupManager;
@@ -280,6 +283,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private ListPreference mRamMinfree;
     private ListPreference mZramSize;
     private ListPreference mKernelOc;
+    private ListPreference mDozeBrightness;
 
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
 
@@ -451,6 +455,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mRamMinfree = addListPreference(RAM_MINFREE_KEY);
         mZramSize = addListPreference(ZRAM_SIZE_KEY);
         mKernelOc = addListPreference(KERNEL_OC_KEY);
+        mDozeBrightness = addListPreference(DOZE_BRIGHTNESS_KEY);
     }
 
     private ListPreference addListPreference(String prefKey) {
@@ -659,6 +664,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         updateRamMinfreeOptions();
         updateZramSizeOptions();
         updateKernelOcOptions();
+        updateDozeBrightnessOptions();
     }
 
     private void writeAdvancedRebootOptions() {
@@ -1601,6 +1607,26 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         SystemProperties.set(KERNEL_OC_PROPERTY, newValue.toString());
         updateKernelOcOptions();
     }
+    
+    private void updateDozeBrightnessOptions() {
+        String value = SystemProperties.get(DOZE_BRIGHTNESS_PROPERTY, "-1");
+        int index = mDozeBrightness.findIndexOfValue(value);
+        if (index == -1) {
+            index = mDozeBrightness.getEntryValues().length - 1;
+        }
+        mDozeBrightness.setValueIndex(index);
+        mDozeBrightness.setSummary((mDozeBrightness.getEntries()[index]).toString().replace("%","%%"));
+    }
+
+    private void writeDozeBrightnessOptions(Object newValue) {
+        if (newValue.toString().contentEquals("-2")) {
+            // custom
+            return;
+        }
+        
+        SystemProperties.set(DOZE_BRIGHTNESS_PROPERTY, newValue.toString());
+        updateDozeBrightnessOptions();
+    }
 
     @Override
     public void onSwitchChanged(Switch switchView, boolean isChecked) {
@@ -1879,6 +1905,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             return true;
         } else if (preference == mKernelOc) {
             writeKernelOcOptions(newValue);
+            return true;
+        } else if (preference == mDozeBrightness) {
+            writeDozeBrightnessOptions(newValue);
             return true;
         }
         return false;
