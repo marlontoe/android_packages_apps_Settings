@@ -1202,9 +1202,12 @@
     <string name="ram_minfree_automatic">Automatic</string>
     
     <!-- zram -->
-   <string name="zram_size_title">Swap/zram (*)</string>
+    <string name="zram_size_title">Swap/zram (*)</string>
 
-   <!-- kernel -->
-   <string name="kernel_oc_title">Overclocking (**)</string>
+    <!-- kernel -->
+    <string name="kernel_oc_title">Overclocking (**)</string>
+    
+    <!-- doze brightness -->
+    <string name="doze_brightness_title">Ambient brightness level (*)</string>
 
 </resources>
