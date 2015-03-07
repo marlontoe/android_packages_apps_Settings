@@ -413,6 +413,11 @@
     <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
 
+    <!-- Status bar - MSIM tweaks-->
+    <string name="status_bar_show_unused_sims_title">Show empty SIM icons</string>
+    <string name="status_bar_show_unused_sims_title_summary_off">Hide icons of unused SIM slots</string>
+    <string name="status_bar_show_unused_sims_title_summary_on">Indicate unused SIM slots</string>
+
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Edit light settings</string>
     <string name="pulse_speed_title">Pulse length and speed</string>
@@ -1129,7 +1134,7 @@
 
     <!-- LiveDisplay -->
     <string name="live_display_title" translatable="false">LiveDisplay</string>
-    <string name="live_display_summary">Optimize your screen based on time of day and ambient conditions to improve readibility and reduce eyestrain</string>
+    <string name="live_display_summary">Optimize your screen based on time of day and ambient conditions to improve readability and reduce eyestrain</string>
     <string name="live_display_mode">Display mode</string>
     <string name="live_display_color_temperature_title">Color temperature</string>
     <string name="live_display_color_temperature_summary">Day: <xliff:g id="day_temperature">%1$d</xliff:g>K  Night: <xliff:g id="night_temperature">%2$d</xliff:g>K</string>
