@@ -408,13 +408,6 @@
             android:entries="@array/zram_size_entries"
             android:entryValues="@array/zram_size_values" />
 
-        <ListPreference
-            android:key="doze_brightness"
-            android:title="@string/doze_brightness_title"
-            android:persistent="false"
-            android:entries="@array/doze_brightness_entries"
-            android:entryValues="@array/doze_brightness_values" />
-
      </PreferenceCategory>
 
 </PreferenceScreen>
