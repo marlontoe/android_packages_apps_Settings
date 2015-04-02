@@ -57,11 +57,12 @@
                     android:targetClass="com.android.settings.deviceinfo.Status" />
         </PreferenceScreen>
 
-        <!-- Contributors cloud -->
+        <!-- Contributors cloud
+        TODO: FIX ME!
         <PreferenceScreen android:key="contributor_cloud"
             android:title="@string/contributor_cloud_title"
             android:fragment="com.android.settings.cyanogenmod.ContributorsCloud" >
-        </PreferenceScreen>
+        </PreferenceScreen> -->
 
         <!-- Legal Information -->
         <PreferenceScreen
@@ -132,12 +133,6 @@
                 style="?android:preferenceInformationStyle"
                 android:title="@string/mod_version"
                 android:summary="@string/mod_version_default" />
-
-        <!-- Device hardware processor infol -->
-        <Preference android:key="device_processor"
-                style="?android:preferenceInformationStyle"
-                android:title="@string/processor_info"
-                android:summary="@string/device_info_default"/>
 
         <!-- Device firmware version -->
         <Preference android:key="firmware_version" 
